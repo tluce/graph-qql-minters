@@ -1,1 +1,6 @@
-
+type ItemMinted @entity {
+  id: ID!
+  minterAddress: Bytes!
+  minterEns: String
+  tokenId: BigInt!
+}

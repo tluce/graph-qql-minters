@@ -13,32 +13,11 @@ dataSources:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Approval
-        - ApprovalForAll
-        - ApprovalForAllSeeds
-        - OwnershipTransferred
-        - ProjectRoyaltyRecipientChange
-        - SeedTransfer
-        - TokenRoyaltyRecipientChange
         - Transfer
       abis:
         - name: QQL
           file: ./abis/QQL.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,indexed uint256)
-          handler: handleApproval
-        - event: ApprovalForAll(indexed address,indexed address,bool)
-          handler: handleApprovalForAll
-        - event: ApprovalForAllSeeds(indexed address,indexed address,bool)
-          handler: handleApprovalForAllSeeds
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
-        - event: ProjectRoyaltyRecipientChange(indexed address)
-          handler: handleProjectRoyaltyRecipientChange
-        - event: SeedTransfer(indexed address,indexed address,indexed bytes32)
-          handler: handleSeedTransfer
-        - event: TokenRoyaltyRecipientChange(indexed uint256,indexed address)
-          handler: handleTokenRoyaltyRecipientChange
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
       file: ./src/qql.ts
