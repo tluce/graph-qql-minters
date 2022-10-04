@@ -51,23 +51,6 @@ export class ItemMinted extends Entity {
     this.set("minterAddress", Value.fromBytes(value));
   }
 
-  get minterEns(): string | null {
-    let value = this.get("minterEns");
-    if (!value || value.kind == ValueKind.NULL) {
-      return null;
-    } else {
-      return value.toString();
-    }
-  }
-
-  set minterEns(value: string | null) {
-    if (!value) {
-      this.unset("minterEns");
-    } else {
-      this.set("minterEns", Value.fromString(<string>value));
-    }
-  }
-
   get tokenId(): BigInt {
     let value = this.get("tokenId");
     return value!.toBigInt();

@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0x845dd2a7ee2a92a0518ab2135365ed63fdba0c88"
       abi: QQL
+      startBlock: 15627631
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
