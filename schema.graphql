@@ -1,4 +1,4 @@
-type ItemMinted @entity {
+type MintedItem @entity {
   id: ID!
   minterAddress: Bytes!
   tokenId: BigInt!
